@@ -1,6 +1,6 @@
 const JsCode = () => {
     return <div className='input-c'>
-            <h2>JS</h2>
+            <button><h2>JavaScript</h2></button>
             <textarea className="textarea-c"></textarea>
         
         </div>
