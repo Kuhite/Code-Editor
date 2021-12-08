@@ -1,15 +1,18 @@
 import {useRef, useState} from 'react';
-
+import $ from 'jquery';
 
 const Output = () => {
-    const htmlContainer = useRef(null);
-    const cssContainer = useRef(null);
-    const jsContainer = useRef(null);
-
+    const htmlContainer = useRef("");
+    const cssContainer = useRef("");
+    const jsContainer = useRef("");
+  
     const DisplayOutput = () => {
-       document.querySelector("iframe").contents().find("html").html()
-        
-        
+        const HTML = htmlContainer.current.value;
+        const CSS = cssContainer.current.value;
+        const JS = jsContainer.current.value;
+        $("iframe").contents().find("html").html(
+            "<html><head><style type = 'text/css'>"+CSS+"</style></head><body>"+HTML+"<script type='text/javascript'></script></body></html>");
+            document.getElementById("iframe").contentWindow.eval($("js").val());
     }
     
 
@@ -22,11 +25,11 @@ const Output = () => {
                 </div>
                 <div id = "css" className="input">
                     <button>CSS</button>
-                    <textarea ref={htmlContainer}></textarea>
+                    <textarea ref={cssContainer}></textarea>
                 </div>
                 <div id = "js" className="input">
                     <button>JS</button>
-                    <textarea ref={htmlContainer}></textarea>
+                    <textarea ref={jsContainer}></textarea>
                 </div>
             </div>
 
