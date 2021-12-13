@@ -1,11 +1,9 @@
 import {useRef} from 'react';
 
-
 const Output = () => {
     const htmlContainer = useRef(null);
     const cssContainer = useRef(null);
     const jsContainer = useRef(null);
- 
 
 
     const DisplayOutput = (e) => {
@@ -44,17 +42,17 @@ const Output = () => {
                
                 <div id = "html" >
                     <button>HTML</button><br/>
-                    <textarea ref={htmlContainer}></textarea>
+                    <textarea ref={htmlContainer} id="htmlc"></textarea>
                 </div>
 
                 <div id = "css" >
                     <button>CSS</button><br/>
-                    <textarea ref={cssContainer}></textarea>
+                    <textarea ref={cssContainer} id="cssc"></textarea>
                 </div>
 
                 <div id = "js">
                     <button>JS</button><br/>
-                    <textarea ref={jsContainer}></textarea>
+                    <textarea ref={jsContainer} id="jsc"></textarea>
                 </div>
                  
                 </form>
@@ -62,8 +60,7 @@ const Output = () => {
 
             <div className = "output">
                 <h1>Output</h1>
-                <a><iframe  id ="iframe" title="Output"></iframe></a>
-                <div id="FinalOutput"></div>
+                <iframe  id ="iframe" title="Output"></iframe>
             </div>
 
         </div>

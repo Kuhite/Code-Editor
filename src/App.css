@@ -1,6 +1,7 @@
 *{
     margin:0;
     padding:0;
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@200&display=swap');
 }
 
 body{
@@ -103,19 +104,22 @@ form{
     transition: .2s;
 }
 
-#html textarea{
+#htmlc{
     background-color: rgb(0, 70, 0);
     color:white;
+    display: block;
 }
 
 #css textarea{
     background-color: rgb(0, 0, 109);
     color:white;
+
 }
 
 #js textarea{
     background-color: rgb(122, 0, 0);
     color:white;
+
 }
 
 textarea{
@@ -130,7 +134,22 @@ textarea{
 .output{
     float:right;
     margin-right: 100px;
-    background-color: red;
-    width:650px;
+    margin-top: 50px;;
+    width:700px;
+    text-align: center;
+    height:180vh;
+    border-left: 8px solid black;
 }
 
+.output h1 {
+    margin-bottom: 15px;
+}
+
+iframe{
+    width:650px;
+    height: 90vh;
+    margin-left: 20px;
+    border:none;
+    padding:10px;
+    
+}
