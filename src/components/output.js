@@ -1,4 +1,4 @@
-import {useRef, useState} from 'react';
+import {useRef} from 'react';
 
 
 const Output = () => {
@@ -37,25 +37,26 @@ const Output = () => {
     
 
     return(
-        <div>
+        <div className='io'>
             <div className ="input">
                 <form onSubmit={DisplayOutput}>
                 <button type="submit" className="outputButton">Output</button>
+               
                 <div id = "html" >
                     <button>HTML</button><br/>
                     <textarea ref={htmlContainer}></textarea>
                 </div>
+
                 <div id = "css" >
                     <button>CSS</button><br/>
                     <textarea ref={cssContainer}></textarea>
                 </div>
+
                 <div id = "js">
                     <button>JS</button><br/>
                     <textarea ref={jsContainer}></textarea>
                 </div>
-                <div >
-               
-                </div>
+                 
                 </form>
             </div>
 
@@ -63,7 +64,7 @@ const Output = () => {
                 <h1>Output</h1>
                 <a><iframe  id ="iframe" title="Output"></iframe></a>
                 <div id="FinalOutput"></div>
-                </div>
+            </div>
 
         </div>
     )
