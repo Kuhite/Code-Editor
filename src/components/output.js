@@ -5,7 +5,17 @@ const Output = () => {
     const cssContainer = useRef(null);
     const jsContainer = useRef(null);
 
+    const toggleDisplay = (b) => {
+        var x = document.getElementById(b);
 
+        if(x.style.display === 'none'){
+            x.style.display = 'block';
+        }else{
+            x.style.display = 'none';
+
+        }
+
+    }
     const DisplayOutput = (e) => {
         e.preventDefault();
         var HTML =htmlContainer.current.value;
@@ -41,17 +51,17 @@ const Output = () => {
                 <button type="submit" className="outputButton">Output</button>
                
                 <div id = "html" >
-                    <button>HTML</button><br/>
+                    <button onClick={() => {toggleDisplay("htmlc")}}>HTML</button><br/>
                     <textarea ref={htmlContainer} id="htmlc"></textarea>
                 </div>
 
                 <div id = "css" >
-                    <button>CSS</button><br/>
+                    <button onClick={() => {toggleDisplay("cssc")}}>CSS</button><br/>
                     <textarea ref={cssContainer} id="cssc"></textarea>
                 </div>
 
                 <div id = "js">
-                    <button>JS</button><br/>
+                    <button onClick={() => {toggleDisplay("jsc")}}>JS</button><br/>
                     <textarea ref={jsContainer} id="jsc"></textarea>
                 </div>
                  
